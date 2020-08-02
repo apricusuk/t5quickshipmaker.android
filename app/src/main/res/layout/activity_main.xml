@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:onClick="fnCalculate"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTonnage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/tonnage_hint"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtTonnage"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <TextView
+        android:id="@+id/txtTonnage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="clip_vertical|end"
+        android:text="@string/tonnage"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTonnage"
+        app:layout_constraintEnd_toStartOf="@+id/editTonnage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTonnage" />
+
+    <CheckBox
+        android:id="@+id/chkStreamlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:hint="@string/streamlined"
+        android:text="@string/streamlined"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/chkBridge"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chkBridge" />
+
+    <CheckBox
+        android:id="@+id/chkBridge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:hint="@string/bridge_hint"
+        android:text="@string/bridge"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chkStreamlined"
+        app:layout_constraintTop_toBottomOf="@+id/editManeuver" />
+
+    <TextView
+        android:id="@+id/txtJump"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:hint="@string/jump_hint"
+        android:text="@string/jump"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editManeuver"
+        app:layout_constraintEnd_toStartOf="@+id/editJump"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTonnage" />
+
+    <EditText
+        android:id="@+id/editJump"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/jump_hint"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editManeuver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtJump"
+        app:layout_constraintTop_toBottomOf="@+id/editTonnage" />
+
+    <TextView
+        android:id="@+id/txtManeuver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/maneuver"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/chkBridge"
+        app:layout_constraintEnd_toStartOf="@+id/editManeuver"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editJump" />
+
+    <TextView
+        android:id="@+id/txtDisclaimer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/disclaimer"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
+
+    <EditText
+        android:id="@+id/editManeuver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/maneuver_hint"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtManeuver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtManeuver" />
+
+    <Spinner
+        android:id="@+id/spinEmplacements"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/Emplacements"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtEmplacements"
+        app:layout_constraintTop_toBottomOf="@+id/chkBridge" />
+
+    <TextView
+        android:id="@+id/txtEmplacements"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/emplacements"
+        app:layout_constraintEnd_toStartOf="@+id/spinEmplacements"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinEmplacements" />
+
+    <Spinner
+        android:id="@+id/spinCargoRatio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/CargoRatios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtCargoRatio"
+        app:layout_constraintTop_toBottomOf="@+id/spinEmplacements" />
+
+    <TextView
+        android:id="@+id/txtCargoRatio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/cargoratio"
+        app:layout_constraintEnd_toStartOf="@+id/spinCargoRatio"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinEmplacements" />
+
+    <Spinner
+        android:id="@+id/spinAccommodations"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/Acccommodations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtAccommodations"
+        app:layout_constraintTop_toBottomOf="@+id/spinCargoRatio" />
+
+    <TextView
+        android:id="@+id/txtAccommodations"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/accomodations"
+        app:layout_constraintEnd_toStartOf="@+id/spinAccommodations"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinCargoRatio" />
+
+    <EditText
+        android:id="@+id/editOutput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/output_hint"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:maxLines="12"
+        android:minLines="8"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinAccommodations" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fnCalculate"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editOutput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

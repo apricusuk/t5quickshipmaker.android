@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">t5quickshipmaker</string>
+    <string name="disclaimer">The Traveller game in all forms is owned by Far Future Enterprises. Copyright 1977 – 2020 Far Future Enterprises. Traveller is a registered trademark of Far Future Enterprises. Far Future permits web sites and fanzines for this game, provided it contains this notice, that Far Future is notified, and subject to a withdrawal of permission on 90 days notice. The contents of this site are for personal, non-commercial use only. Any use of Far Future Enterprises’s copyrighted material or trademarks anywhere on this web site and its files should not be viewed as a challenge to those copyrights or trademarks. In addition, any program/articles/file on this site cannot be republished or distributed without the consent of the author who contributed it.</string>
+    <string name="streamlined">Streamlined</string>
+    <string name="streamlined_hint">Check for streamlined hull, uncheck for unstreamlind hull</string>
+    <string name="bridge">Bridge</string>
+    <string name="bridge_hint">Check for bridge</string>
+    <string name="tonnage">Tonnage</string>
+    <string name="tonnage_hint">Tonnage 10-5000</string>
+    <string name="title">T5 Quick Shipmaker</string>
+    <string name="jump">Jump</string>
+    <string name="jump_hint">Jump</string>
+    <string name="maneuver">Maneuver</string>
+    <string name="maneuver_hint">Maneuver</string>
+    <string name="emplacements">Emplacements</string>
+    <string name="cargoratio">Cargo ratio</string>
+    <string name="accomodations">Accommodations</string>
+    <string name="calculate">Calculate</string>
+    <string name="output_hint">Volume : \nJump : \nManeuver : \nCrew : \nBridge : \nHardpoints : \nPassengers : \nCargo hold : \nCost : </string>
+    <string-array name="Emplacements">
+        <item>None</item>
+        <item>Single</item>
+        <item>Double</item>
+        <item>Triple</item>
+    </string-array>
+    <string-array name="CargoRatios">
+        <item>All Cargo</item>
+        <item>80 / 20</item>
+        <item>50 / 50</item>
+        <item>20 / 80</item>
+        <item>All Passengers</item>
+    </string-array>
+    <string-array name="Acccommodations">
+        <item>Crowded (Demand-3)</item>
+        <item>Standard</item>
+        <item>Luxury (Demand+3)</item>
+    </string-array>
+</resources>
